@@ -51,6 +51,15 @@ background-color: #1a1a1d;
   transition: 0.2s linear;
   font-weight: 600;
   font-size: 25px;
+  background-image: linear-gradient(to right, #6a1e55, #a64d79);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  animation: logo 60s linear infinite;
+}
+@keyframes logo {
+  to {
+    background-position: 4500px;
+  }
 }
 .logo:hover {
   transform: scale(1.1);
@@ -105,7 +114,7 @@ background-color: #1a1a1d;
   font-size: 30px;
 }
 .p__card {
-  color: #6a1e55;
+  color: #a64d79;
   font-size: 20px;
   font-weight: 600;
 }
@@ -170,16 +179,9 @@ a {
   .p3 {
     font-size: 14px;
   }
-  .img {
-    width: 80%;
-    position: relative;
-    top: 20px;
-    left: 5%;
-    margin-bottom: 20px;
-background-color: #1a1a1d;
-    box-shadow: none;
+  .img__card{
+    height: 50%;
   }
-  
   .header {
     display: flex;
     flex-direction: column;
@@ -196,6 +198,22 @@ background-color: #1a1a1d;
     display: flex;
     flex-direction: column;
   }
+.about__card {
+  
+  font-size: 20px;
+}
+.p__card{
+  font-size: 15px;
+}
+.btn__card{
+font-size: 1px;
+border: 2.5px solid #6a1e55;
+padding: 12px 30px;
+}
+a{
+  font-size: 15px;
+}
+
 }
 @media (max-width: 375px) {
   .nav {
