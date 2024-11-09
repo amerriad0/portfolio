@@ -67,6 +67,15 @@ a {
   transition: 0.2s linear;
   font-weight: 600;
   font-size: 25px;
+  background-image: linear-gradient(to right, #6a1e55, #a64d79);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  animation: logo 60s linear infinite;
+}
+@keyframes logo {
+  to {
+    background-position: 4500px;
+  }
 }
 .logo:hover {
   transform: scale(1.1);
