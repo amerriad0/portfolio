@@ -13,9 +13,10 @@ a {
   font-size: 30px;
 }
 .header {
-      background-color: #1a1a1d;
-      position: sticky;
-      top: 0;
+  background-color: #1a1a1d;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   padding: 2rem 9%;
@@ -31,6 +32,8 @@ a {
   top: 0px; */
   margin-bottom: 10px;
 }
+/* .main {
+} */
 .nav__list {
   margin-left: 4rem;
   font-weight: 600;
@@ -42,16 +45,30 @@ a {
   border-bottom: 4px solid #a64d79;
   color: #a64d79;
 }
+
+a {
+  text-decoration: none;
+  color: #6a1e55;
+  font-size: 30px;
+}
 .active {
   border-bottom: #a64d79 4px solid;
   color: #a64d79;
 }
 .logo {
-  padding: 10px 30px;
   color: #6a1e55;
   transition: 0.2s linear;
   font-weight: 600;
   font-size: 25px;
+  background-image: linear-gradient(to right, #6a1e55, #a64d79);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  animation: logo 60s linear infinite;
+}
+@keyframes logo {
+  to {
+    background-position: 4500px;
+  }
 }
 
 .about__contact {
@@ -75,28 +92,30 @@ input {
   color: white;
   background-color: #1a1a1d;
   width: 30%;
-  font-size: 30px;
-  padding: 16px 16px;
+  font-size: 20px;
+  padding: 25px 16px;
   border-radius: 10px;
   border-color: #1a1a1d;
   margin-bottom: 40px;
-  -webkit-box-shadow: 0px 0px 6px 10px #a64d79 inset;
-  -moz-box-shadow: 0px 0px 6px 10px #a64d79 inset;
-  box-shadow: 0px 0px 6px 10px #a64d79 inset;
+ -webkit-box-shadow:0px 0px 18px 0px #6a1e55 inset;
+-moz-box-shadow:0px 0px 18px 0px #6a1e55 inset;
+box-shadow:0px 0px 18px 0px #6a1e55 inset;
   transition: 0.8s;
 }
 input[type="text"]::placeholder {
   color: #c5c3c3;
   opacity: 1;
   font-size: 20px;
-  padding-left: 30px;
+  padding-left:20px;
+  ;
 }
+
 
 input[type="email"]::placeholder {
   color: #c5c3c3;
   opacity: 1;
   font-size: 20px;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 input[type="email"] {
   width: 28%;
@@ -106,9 +125,9 @@ input:hover {
 }
 textarea {
   background-color: #1a1a1d;
-  -webkit-box-shadow: 0px 0px 6px 10px #a64d79 inset;
-  -moz-box-shadow: 0px 0px 6px 10px #a64d79 inset;
-  box-shadow: 0px 0px 6px 10px #a64d79 inset;
+  -webkit-box-shadow:0px 0px 18px 0px #6a1e55 inset;
+-moz-box-shadow:0px 0px 18px 0px #6a1e55 inset;
+box-shadow:0px 0px 18px 0px #6a1e55 inset;
   width: 24%;
   font-size: 20px;
   padding: 16px 10px;
@@ -117,8 +136,8 @@ textarea {
   border: none;
   color: #c5c3c3;
   opacity: 1;
-  font-size: 25px;
-  margin-bottom: 50px;
+  font-size: 20px;
+  margin-bottom: 30px;
   transition: 0.8s;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -130,12 +149,16 @@ input:focus-within {
   outline: none;
   /* border-color: #a64d79; */
   /* border-width:3px ; */
-  font-size: 20px;
+  
+  
+  
 }
 textarea:focus-within {
   outline: none;
   color: white;
   font-size: 20px;
+  padding: 16px 10px;
+  padding-left: 40px;
   border-color: #a64d79;
   /* border-width:3px ;    */
 }
@@ -184,6 +207,7 @@ button:hover {
   }
   input[type="email"] {
     width: 300px;
+  
   }
   textarea {
     width: 280px;
@@ -228,6 +252,26 @@ button:hover {
     display: flex;
     flex-direction: column;
   }
+.input{
+  height: 5px;
+}
+input[type="email"]{
+  height: 5px;
+}
+input[type="text"]::placeholder {
+  
+  font-size: 15px;
+}
+
+
+input[type="email"]::placeholder {
+ font-size: 15px;
+}
+
+textarea::placeholder{
+  font-size: 15px;
+}
+
 }
 @media (max-width: 375px) {
   .nav {
